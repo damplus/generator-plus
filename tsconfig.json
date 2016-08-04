@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "noImplicitAny": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "target": "es5",
+    "outDir": "generators",
+    "rootDir": "src",
+    "inlineSourceMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "src/*/templates"
+  ]
+}
