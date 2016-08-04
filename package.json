@@ -10,11 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/yeoman-generator": "0.0.27",
+    "lodash": "4.14.1",
     "typescript": "2.0.0",
     "yeoman-generator": "0.24.1"
   },
   "files": [
     "generators"
-  ]
+  ],
+  "devDependencies": {
+    "@types/lodash": "0.0.29",
+    "@types/yeoman-generator": "0.0.27"
+  }
 }
