@@ -1,0 +1,30 @@
+import * as React from 'react'
+import shallowCompare from 'react-addons-shallow-compare'
+
+const styles = require('<%= fileBase %>.style.scss')
+
+interface <%= componentName %>Props {
+}
+
+interface <%= componentName %>State {
+}
+
+/**
+  <%= description %>
+*/
+export default class <%= componentName %> extends React.Component<<%= componentName %>Props, <%= componentName %>State> {
+  componentWillMount() {
+  }
+
+  shouldComponentUpdate(newProps: <%= componentName %>Props, newState: <%= componentName %>State) {
+    return shallowCompare(this, newProps, newState)
+  }
+
+  render() {
+    return (
+      <div
+        className={styles.root}
+      />
+    )
+  }
+}

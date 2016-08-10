@@ -2,23 +2,21 @@ import * as React from 'react'
 import { expect } from 'chai'
 import { createRenderer } from 'react-addons-test-utils'
 
-import <%= componentName %> from './src'
-
-const theme = {
-  root: 'root'
-}
+import <%= componentName %> from './<%= fileBase %>'
+const styles = require('./<%= fileBase %>.style.scss')
 
 describe("<<%= componentName %> />", function () {
   it("should render with all optional parameters provided", function () {
     const renderer = createRenderer()
     renderer.render(
       <<%= componentName %>
-        theme={theme}
       />
     )
 
     expect(renderer.getRenderOutput()).to.deep.eql(
-      <div className={theme.root} />
+      <div
+        className={styles.root}
+      />
     )
   })
 
@@ -26,12 +24,13 @@ describe("<<%= componentName %> />", function () {
     const renderer = createRenderer()
     renderer.render(
       <<%= componentName %>
-        theme={theme}
       />
     )
 
     expect(renderer.getRenderOutput()).to.deep.eql(
-      <div className={theme.root} />
+      <div
+        className={styles.root}
+      />
     )
   })
 })
