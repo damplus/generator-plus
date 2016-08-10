@@ -2,13 +2,13 @@
   "name": "generator-plus",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "sh build.sh",
-    "prepublish": "sh build.sh"
+    "preversion": "npm run build && git add -A",
+    "postversion": "git push --follow-tags origin master && npm publish"
   },
   "keywords": [],
-  "author": "",
+  "author": "DAM Plus",
   "license": "ISC",
   "dependencies": {
     "lodash": "4.14.1",
